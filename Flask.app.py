@@ -1,3 +1,4 @@
+# Import Dependencies
 import numpy as np
 import datetime as dt
 import sqlalchemy
@@ -42,6 +43,7 @@ def welcome():
 @app.route("/api/v1.0/precipitation")
 def precipitation():
     """Return a list of precipitation data"""
+
     # Query all 
     results = session.query(Measurement.date,Measurement.prcp).all()
 
@@ -57,6 +59,7 @@ def precipitation():
 @app.route("/api/v1.0/stations")
 def stations():
     """Return a list of stations"""
+
     # Query all stations
     results = session.query(Measurement.station).group_by(Measurement.station).all()
 
@@ -68,6 +71,7 @@ def stations():
 @app.route("/api/v1.0/tobs")
 def temperature():
     """Return a list of temperature data"""
+    
     # Query all tobs
     last_date = session.query(Measurement.date).order_by(Measurement.date.desc()).first()
     last_date = str(np.ravel(last_date))
