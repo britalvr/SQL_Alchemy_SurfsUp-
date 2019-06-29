@@ -103,9 +103,9 @@ def calc_temp_start(start):
 
     tobs_info_start = []
     tobs_info_start_dict = {}
-    tobs_info_start_dict['min'] = results[0]
-    tobs_info_start_dict['avg'] = results[1]
-    tobs_info_start_dict['max'] = results[2]
+    tobs_info_start_dict["min"] = results[0]
+    tobs_info_start_dict["avg"] = results[1]
+    tobs_info_start_dict["max"] = results[2]
     tobs_info_start.append(tobs_info_start_dict)
 
     return jsonify(tobs_info_start)
@@ -121,9 +121,9 @@ def calc_temp(start,end):
 
     tobs_info = []
     tobs_info_dict = {}
-    tobs_info_dict['min'] = results[0]
-    tobs_info_dict['avg'] = results[1]
-    tobs_info_dict['max'] = results[2]
+    tobs_info_dict["min"] = results[0]
+    tobs_info_dict["avg"] = results[1]
+    tobs_info_dict["max"] = results[2]
     tobs_info.append(tobs_info_dict)
 
     return jsonify(tobs_info)
